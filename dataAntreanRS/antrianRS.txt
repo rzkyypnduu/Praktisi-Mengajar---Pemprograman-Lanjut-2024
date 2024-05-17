@@ -1,0 +1,8 @@
+Nomor Antrian: 1
+Nama Pasien: pandu
+Tanggal: 2024-05-17
+--------------------
+Nomor Antrian: 2
+Nama Pasien: queena
+Tanggal: 2024-05-17
+--------------------
