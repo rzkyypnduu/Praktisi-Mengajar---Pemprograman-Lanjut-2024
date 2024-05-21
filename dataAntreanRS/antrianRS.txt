@@ -1,0 +1,48 @@
+Nomor Antrian: 1
+Nama Pasien: pandu
+Tanggal: 2024-05-21
+--------------------
+Nomor Antrian: 2
+Nama Pasien: dira
+Tanggal: 2024-05-21
+--------------------
+Nomor Antrian: 1
+Nama Pasien: pandu
+Tanggal: 2024-05-21
+Waktu: 11:58:27.747473700
+--------------------
+Nomor Antrian: 2
+Nama Pasien: dira
+Tanggal: 2024-05-21
+Waktu: 11:58:31.724627200
+--------------------
+Nomor Antrian: 3
+Nama Pasien: dika
+Tanggal: 2024-05-21
+Waktu: 11:58:34.323226200
+--------------------
+Nomor Antrian: 1
+Nama Pasien: risky
+Tanggal: 2024-05-21
+Waktu: 12:26:56.805285300
+--------------------
+Nomor Antrian: 2
+Nama Pasien: risku
+Tanggal: 2024-05-21
+Waktu: 12:27:04.197444500
+--------------------
+Nomor Antrian: 1
+Nama Pasien: risky
+Tanggal: 2024-05-21
+Waktu: 12:45:29.100205500
+--------------------
+Nomor Antrian: 1
+Nama Pasien: risky
+Tanggal: 2024-05-21
+Waktu: 12:49:00.307594900
+--------------------
+Nomor Antrian: 1
+Nama Pasien: risky
+Tanggal: 2024-05-21
+Waktu: 12:49:36.157236700
+--------------------
