@@ -1,0 +1,10 @@
+Nomor Antrian: 1
+Nama Wajib Pajak: Risky
+Tanggal: 2024-05-27
+Waktu: 15:39:53.445527400
+--------------------
+Nomor Antrian: 1
+Nama Wajib Pajak: pandu
+Tanggal: 2024-05-27
+Waktu: 15:46:23.195706200
+--------------------
