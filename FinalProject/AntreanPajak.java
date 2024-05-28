@@ -58,7 +58,7 @@ public class AntreanPajak extends JFrame {
                 String wajibPajak = JOptionPane.showInputDialog("Masukkan nama wajib pajak:");
                 if (wajibPajak != null && !wajibPajak.isEmpty()) {
                     antrian.offer(wajibPajak);
-                    textArea.append("Wajib Pajak " + wajibPajak + " ditambahkan ke antrian.\n");
+                    // Log dihapus
                     saveData(wajibPajak, nomorAntrian);
                     nomorAntrian++;
                 }
@@ -69,17 +69,17 @@ public class AntreanPajak extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 if (!antrian.isEmpty()) {
                     wajibPajakSedangDiproses = antrian.poll();
-                    textArea.append("Wajib Pajak " + wajibPajakSedangDiproses + " dipanggil.\n");
+                    // Log dihapus
                     antrianSelesai.add(wajibPajakSedangDiproses);
                 } else {
-                    textArea.append("Antrian kosong.\n");
+                    // Log dihapus
                 }
             }
         });
 
         daftarButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                textArea.append("Daftar Antrian:\n");
+                textArea.setText("Daftar Antrian:\n");
                 for (String p : antrian) {
                     textArea.append(p + "\n");
                 }
@@ -89,16 +89,16 @@ public class AntreanPajak extends JFrame {
         diprosesButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (wajibPajakSedangDiproses != null) {
-                    textArea.append("Wajib Pajak yang sedang diproses: " + wajibPajakSedangDiproses + "\n");
+                    textArea.setText("Wajib Pajak yang sedang diproses: " + wajibPajakSedangDiproses + "\n");
                 } else {
-                    textArea.append("Tidak ada wajib pajak yang sedang diproses.\n");
+                    textArea.setText("Tidak ada wajib pajak yang sedang diproses.\n");
                 }
             }
         });
 
         selesaiButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                textArea.append("Antrian yang sudah selesai:\n");
+                textArea.setText("Antrian yang sudah selesai:\n");
                 for (String p : antrianSelesai) {
                     if (!p.equals(wajibPajakSedangDiproses)) {
                         textArea.append(p + "\n");
@@ -142,7 +142,7 @@ public class AntreanPajak extends JFrame {
             writer.write("Waktu: " + waktu + "\n");
             writer.write("--------------------\n");
         } catch (IOException e) {
-            textArea.append("Terjadi kesalahan saat menyimpan data: " + e.getMessage() + "\n");
+            // Log dihapus
         }
     }
 
@@ -154,3 +154,4 @@ public class AntreanPajak extends JFrame {
         });
     }
 }
+
