@@ -55,6 +55,7 @@ public class AntreanPajak extends JFrame {
 
         tambahButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                clearLogAfterDelay();
                 String wajibPajak = JOptionPane.showInputDialog("Masukkan nama wajib pajak:");
                 if (wajibPajak != null && !wajibPajak.isEmpty()) {
                     antrian.offer(wajibPajak);
@@ -67,6 +68,7 @@ public class AntreanPajak extends JFrame {
 
         panggilButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                clearLogAfterDelay();
                 if (!antrian.isEmpty()) {
                     wajibPajakSedangDiproses = antrian.poll();
                     textArea.append("Wajib Pajak " + wajibPajakSedangDiproses + " dipanggil.\n");
@@ -79,6 +81,7 @@ public class AntreanPajak extends JFrame {
 
         daftarButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                clearLogAfterDelay();
                 textArea.append("Daftar Antrian:\n");
                 for (String p : antrian) {
                     textArea.append(p + "\n");
@@ -88,6 +91,7 @@ public class AntreanPajak extends JFrame {
 
         diprosesButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                clearLogAfterDelay();
                 if (wajibPajakSedangDiproses != null) {
                     textArea.append("Wajib Pajak yang sedang diproses: " + wajibPajakSedangDiproses + "\n");
                 } else {
@@ -98,6 +102,7 @@ public class AntreanPajak extends JFrame {
 
         selesaiButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                clearLogAfterDelay();
                 textArea.append("Antrian yang sudah selesai:\n");
                 for (String p : antrianSelesai) {
                     if (!p.equals(wajibPajakSedangDiproses)) {
@@ -109,22 +114,28 @@ public class AntreanPajak extends JFrame {
 
         resetButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                clearLogAfterDelay();
                 antrian.clear();
                 antrianSelesai.clear();
                 wajibPajakSedangDiproses = null;
                 nomorAntrian = 1;
-                textArea.setText("Antrian telah direset.\n");
+                textArea.append("Antrian telah direset.\n");
             }
         });
 
         keluarButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                clearLogAfterDelay();
                 dispose();
             }
         });
 
         add(panel);
         setVisible(true);
+    }
+
+    private void clearLogAfterDelay() {
+        textArea.setText("");
     }
 
     private void saveData(String namaWajibPajak, int nomorAntrian) {
@@ -143,6 +154,7 @@ public class AntreanPajak extends JFrame {
             writer.write("--------------------\n");
         } catch (IOException e) {
             textArea.append("Terjadi kesalahan saat menyimpan data: " + e.getMessage() + "\n");
+            clearLogAfterDelay();
         }
     }
 

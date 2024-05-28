@@ -23,3 +23,18 @@ Nama Wajib Pajak: risky
 Tanggal: 2024-05-28
 Waktu: 10:45:50.825654800
 --------------------
+Nomor Antrian: 1
+Nama Wajib Pajak: panduu
+Tanggal: 2024-05-28
+Waktu: 11:03:05.920079700
+--------------------
+Nomor Antrian: 1
+Nama Wajib Pajak: pandu
+Tanggal: 2024-05-28
+Waktu: 11:06:27.734026900
+--------------------
+Nomor Antrian: 2
+Nama Wajib Pajak: risky
+Tanggal: 2024-05-28
+Waktu: 11:06:36.518842500
+--------------------
